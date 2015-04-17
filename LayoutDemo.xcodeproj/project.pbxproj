@@ -14,6 +14,7 @@
 		8E6D3BCB19F0DC4C00C3DA85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D3BCA19F0DC4C00C3DA85 /* Images.xcassets */; };
 		8E6D3BCE19F0DC4C00C3DA85 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D3BCC19F0DC4C00C3DA85 /* LaunchScreen.xib */; };
 		8E6D3BDA19F0DC4D00C3DA85 /* LayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D3BD919F0DC4D00C3DA85 /* LayoutDemoTests.m */; };
+		8E7971421ADF57A300D0E703 /* UIView+MGLConstaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7971411ADF57A300D0E703 /* UIView+MGLConstaint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		8E6D3BD319F0DC4D00C3DA85 /* LayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6D3BD819F0DC4D00C3DA85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E6D3BD919F0DC4D00C3DA85 /* LayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutDemoTests.m; sourceTree = "<group>"; };
+		8E7971401ADF57A300D0E703 /* UIView+MGLConstaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGLConstaint.h"; sourceTree = "<group>"; };
+		8E7971411ADF57A300D0E703 /* UIView+MGLConstaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGLConstaint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				8E6D3BC419F0DC4C00C3DA85 /* ViewController.h */,
 				8E6D3BC519F0DC4C00C3DA85 /* ViewController.m */,
 				8E6D3BC719F0DC4C00C3DA85 /* Main.storyboard */,
+				8E7971401ADF57A300D0E703 /* UIView+MGLConstaint.h */,
+				8E7971411ADF57A300D0E703 /* UIView+MGLConstaint.m */,
 				8E6D3BCA19F0DC4C00C3DA85 /* Images.xcassets */,
 				8E6D3BCC19F0DC4C00C3DA85 /* LaunchScreen.xib */,
 				8E6D3BBD19F0DC4C00C3DA85 /* Supporting Files */,
@@ -222,6 +227,7 @@
 				8E6D3BC619F0DC4C00C3DA85 /* ViewController.m in Sources */,
 				8E6D3BC319F0DC4C00C3DA85 /* AppDelegate.m in Sources */,
 				8E6D3BC019F0DC4C00C3DA85 /* main.m in Sources */,
+				8E7971421ADF57A300D0E703 /* UIView+MGLConstaint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,7 @@
 				8E6D3BDF19F0DC4D00C3DA85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E6D3BE019F0DC4D00C3DA85 /* Build configuration list for PBXNativeTarget "LayoutDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				8E6D3BE219F0DC4D00C3DA85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
