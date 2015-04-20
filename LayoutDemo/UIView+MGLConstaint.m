@@ -36,7 +36,12 @@
     [self setTop:edge.top];
     [self setBottom:edge.bottom];
 }
-
+- (void)setFrameLayout:(CGRect)frame{
+    [self setLeft:CGRectGetMinX(frame)];
+    [self setTop:CGRectGetMinY(frame)];
+    [self setWidth:CGRectGetWidth(frame)];
+    [self setHeight:CGRectGetHeight(frame)];
+}
 - (void)setHeight:(CGFloat)height{
     [self setAttribute:NSLayoutAttributeHeight withConstant:height];
 }
@@ -94,6 +99,12 @@
     layoutContraint = [NSLayoutConstraint constraintWithItem:self attribute:centerXY relatedBy:NSLayoutRelationEqual toItem:secondItem attribute:secondAttribute multiplier:multipliter constant:constant];
     [self.superview addConstraint:layoutContraint];
 }
+
+- (void)sameWidthHeight:(CGFloat)constant{
+    [self setHeight:constant];
+    [self setWidth:constant];
+}
+
 // radio add to super View
 - (void)setRotia:(CGFloat)ratio layoutAttribute:(NSLayoutAttribute)attribute withView:(UIView *)secondItem{
     
@@ -123,6 +134,7 @@
 
 - (void)setSuperEdgeType:(NSLayoutAttribute)attribute constant:(CGFloat)constant{
     NSAssert(self.superview, @"请添加到superview");
+    NSAssert(!self.translatesAutoresizingMaskIntoConstraints,@"should set  translatesAutoresizingMaskIntoConstraints = NO");
     switch (attribute) {
         case NSLayoutAttributeLeft:
         case NSLayoutAttributeRight:

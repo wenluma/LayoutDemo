@@ -12,6 +12,7 @@
 // default to self to super view
 
 - (void)setEdge:(UIEdgeInsets)edge;
+- (void)setFrameLayout:(CGRect)frame;
 
 - (void)startLayout:(BOOL)start;
 - (void)setLeft:(CGFloat)left;
@@ -32,6 +33,8 @@
  secondAttribute:(NSLayoutAttribute)secondAttribute
         constant:(CGFloat)constant
       multiplier:(CGFloat)multipliter;
+
+- (void)sameWidthHeight:(CGFloat)constant;
 
 //aspect ratio
 - (void)setRotia:(CGFloat)ratio
