@@ -8,22 +8,33 @@
 
 #import <UIKit/UIKit.h>
 
+static  NSString * const GT_MGL = @">=";
+static  NSString * const ET_MGL = @"==";
+static  NSString * const LT_MGL = @"<=";
+
 @interface UIView (MGLConstaint)
 // default to self to super view
-
-- (void)setEdge:(UIEdgeInsets)edge;
+- (void)setEdgeLayout:(UIEdgeInsets)edge;
 - (void)setFrameLayout:(CGRect)frame;
 
-- (void)startLayout:(BOOL)start;
+//基本设置， 长，宽，左，右，上，下，centerX， centerY ==
 - (void)setLeft:(CGFloat)left;
 - (void)setRight:(CGFloat)right;
 - (void)setTop:(CGFloat)top;
 - (void)setBottom:(CGFloat)bottom;
 - (void)setHeight:(CGFloat)height;
 - (void)setWidth:(CGFloat)width;
-
 - (void)setCenterX:(CGFloat)constant;
 - (void)setCenterY:(CGFloat)constant;
+//>=, <= 操作
+- (void)setLeft:(NSLayoutRelation)relation constant:(CGFloat)left;
+- (void)setRight:(NSLayoutRelation)relation constant:(CGFloat)right;
+- (void)setTop:(NSLayoutRelation)relation constant:(CGFloat)top;
+- (void)setBottom:(NSLayoutRelation)relation constant:(CGFloat)bottom;
+- (void)setWidth:(NSLayoutRelation)relation constant:(CGFloat)width;
+- (void)setHeight:(NSLayoutRelation)relation constant:(CGFloat)height;
+
+// center
 - (void)setCenterX:(CGFloat)constant multiplier:(CGFloat)multiplier;
 - (void)setCenterY:(CGFloat)constant multiplier:(CGFloat)multiplier;
 - (void)setCenterX:(CGFloat)constant withView:(UIView *)secondItem;
